@@ -1,0 +1,125 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: black;
+}
+
+.top-container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('https://images.wallpaperscraft.com/image/single/circuit_chip_detail_172735_1280x720.jpg');
+    background-size: cover;
+    opacity: 0.75;
+    /* border-radius: 10px; */
+}
+
+.top-container {
+    height: 100vh;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.top-container h1 {
+    position: relative;
+    color: rgb(4, 179, 249);
+    font-size: 100px;
+    font-family: cursive;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.top-container h1::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(360deg, rgba(37, 4, 249, 0.9), rgba(4, 179, 249, 0.9));
+    /* background: linear-gradient(90deg, rgba(4, 179, 249, 0.5), rgba(4, 179, 249, 0.5)); */
+    /* 
+    notes:
+    0 deg -> from bottom to top
+    90 deg -> from left to right
+    180 deg -> from top to bottom
+    270 deg -> from right to left
+    -90 deg -> from right to left
+    */
+    z-index: -1;
+    filter: blur(20px);
+}
+
+.text {
+    color: white;
+    margin: 50px 5%;
+    font-family: sans-serif;
+}
+
+.navbar {
+    display: flex;
+    position: fixed;
+    background-color: rgba(0, 0, 0, 0.7);
+    /* remove 0.7 from background color to make navbar 
+    not see through */
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.7);
+    z-index: 1000;
+    /* transition: background-color 0.4s*/
+    transition-duration: 0.4s;
+    /* why transition is not applying on all elements properties
+    it is only applying on background-color not on justify-content */
+}
+
+.navbar ul {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    list-style: none;
+}
+
+.navbar ul li {
+    margin: 10px 20px;
+}
+
+.navbar ul li a {
+    text-decoration: none;
+    color: white;
+    margin: 0 10px;
+    font-family: cursive;
+    font-size: 25px;
+}
+
+.navbar ul li a:hover {
+    color: rgb(4, 179, 249);
+    cursor: pointer;
+}
+
+.navbar.active {
+    background-color: rgba(0, 0, 0);
+    /* remove 0.7 from background color to make navbar 
+    not see through */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.7);
+    /* justify-content: space-around; */
+    /* todo: uncomment above property when animation/transition query resolved.
+     */
+}
+
+.navbar.active ul li a {
+    color: red;
+}
+
+.navbar.active ul li a:hover {
+    color: rgb(4, 179, 249);
+}
