@@ -45,8 +45,8 @@ body {
     left: 0;
     right: 0;
     bottom: 0;
-    background: linear-gradient(360deg, rgba(37, 4, 249, 0.9), rgba(4, 179, 249, 0.9));
-    /* background: linear-gradient(90deg, rgba(4, 179, 249, 0.5), rgba(4, 179, 249, 0.5)); */
+/*     background: linear-gradient(360deg, rgba(37, 4, 249, 0.9), rgba(4, 179, 249, 0.9)); */
+    background: linear-gradient(90deg, rgba(4, 179, 249, 0.5), rgba(4, 179, 249, 0.5));
     /* 
     notes:
     0 deg -> from bottom to top
